@@ -6,7 +6,7 @@ using namespace lunk;
 
 class Actor : public WorldObject {
 public:
-	Actor(World *world) : WorldObject(world) { }
+	Actor(Show *world) : WorldObject(world) { }
 
 	void update(double) override;
 

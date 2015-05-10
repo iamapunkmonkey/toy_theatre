@@ -3,12 +3,12 @@
 #include <thread>
 #include <iostream>
 #include <string>
-#include "World.h"
+#include "base/Show.h"
 
 
 class ConsoleHandler {
 public:
-	ConsoleHandler(World *world) {
+	ConsoleHandler(Show *world) {
 		std::thread{[&]() {
 			while (!started) {
 				std::this_thread::yield();

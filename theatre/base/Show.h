@@ -13,16 +13,17 @@
 #include "Engine.h"
 
 #include "List.h"
-#include "WorldObject.h"
+#include "Act.h"
 
-
-class World : public lunk::Updateable, public lunk::Renderable {
+class Show : public lunk::Updateable, public lunk::Renderable {
 public:
-	World(lunk::Engine *game, lunk::TileEngine *tileEngine);
+	Show(lunk::Engine *game, lunk::TileEngine *tileEngine);
 
 	void update(double timeDelta) override;
 
 	void render(lunk::Renderer *renderer) override;
+
+	void registerAct(Act*);
 
 	lunk::Engine *getEngine();
 
@@ -32,5 +33,5 @@ private:
 	lunk::Vec2 position;
 	lunk::Engine *engine;
 	lunk::TileEngine *tileEngine;
-	std::vector<WorldObject *> worldObjects;
+	std::vector<Act *> acts;
 };

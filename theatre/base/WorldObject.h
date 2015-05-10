@@ -3,18 +3,19 @@
 #include "Entity.h"
 #include "Vec2.h"
 #include "Renderable.h"
-#include "World.h"
+#include "Show.h"
 
 using namespace lunk;
 
+class Show;
 class WorldObject {
 public:
-	WorldObject(World *world) : world(world) { };
+	WorldObject(Show *world) : world(world) { };
 
 	virtual void update(double) = 0;
 
 	virtual void render(Renderer *) = 0;
 
 protected:
-	World *world;
+	Show *world;
 };

@@ -6,7 +6,7 @@
 #endif
 
 #include "Log.h"
-#include "World.h"
+#include "base/Show.h"
 #include "ConsoleHandler.h"
 
 using namespace std;
@@ -31,12 +31,13 @@ int main(int argc, char **argv) {
 	<< engine->getFilesystem()->getCurrentWorkingDirectory()
 	<< endl;
 
-	World *worldPtr = new World(engine, nullptr);
+//	TODO: Replace with running show.
+	Show *showPtr = new Show(engine, nullptr);
 
-	engine->registerUpdateable(worldPtr);
-	engine->registerRenderable(worldPtr);
+	engine->registerUpdateable(showPtr);
+	engine->registerRenderable(showPtr);
 
-	ConsoleHandler consoleHandler{worldPtr};
+	ConsoleHandler consoleHandler{showPtr};
 
 	consoleHandler.start();
 

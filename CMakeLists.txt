@@ -37,4 +37,4 @@ find_package(SDL2_MIXER REQUIRED)
 
 add_subdirectory(engine)
 
-add_subdirectory(game)
+add_subdirectory(theatre)
