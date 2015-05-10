@@ -10,14 +10,19 @@ static Log _log;
 World::World(lunk::Engine *game, lunk::TileEngine *tileEngine)
 		: tileEngine(tileEngine),
 		  engine(game) {
+
 }
 
 void World::render(lunk::Renderer *renderer) {
-
+	for (auto &worldObj : worldObjects) {
+		worldObj->render(renderer);
+	}
 }
 
 void World::update(double timeDelta) {
-
+	for (auto &worldObj : worldObjects) {
+		worldObj->update(timeDelta);
+	}
 }
 
 

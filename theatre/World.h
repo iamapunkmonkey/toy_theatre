@@ -12,6 +12,9 @@
 #include "Sound.h"
 #include "Engine.h"
 
+#include "List.h"
+#include "WorldObject.h"
+
 
 class World : public lunk::Updateable, public lunk::Renderable {
 public:
@@ -29,4 +32,5 @@ private:
 	lunk::Vec2 position;
 	lunk::Engine *engine;
 	lunk::TileEngine *tileEngine;
+	std::vector<WorldObject *> worldObjects;
 };

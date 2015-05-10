@@ -3,6 +3,7 @@
 #include "ListNode.h"
 
 template<typename T>
+
 class List {
 public:
 	void addNode(T);
