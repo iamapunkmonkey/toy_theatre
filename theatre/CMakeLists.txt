@@ -4,7 +4,10 @@ set(THEATRE_SOURCES
     base/Actor.cpp
     base/Act.cpp
     base/Scene.cpp
-    shows/todd/Todd.cpp)
+    shows/todd/Todd.cpp
+    base/actions/Action.cpp
+    base/actions/MovementAction.cpp
+    base/ActionManager.cpp)
 
 set(THEATRE_HEADERS
     base/Show.h
@@ -13,13 +16,16 @@ set(THEATRE_HEADERS
     base/Actor.h
         base/Act.h
         base/Scene.h
-    shows/todd/Todd.h)
+    shows/todd/Todd.h
+    base/actions/Action.h
+    base/actions/MovementAction.h
+    base/ActionManager.h)
 
 source_group(Engine FILES ${THEATRE_SOURCES} ${THEATRE_HEADERS})
 
 add_executable(theatre
     ${THEATRE_SOURCES}
-    ${THEATRE_HEADERS} )
+    ${THEATRE_HEADERS})
 
 include_directories(${SDL2_INCLUDE_DIR})
 

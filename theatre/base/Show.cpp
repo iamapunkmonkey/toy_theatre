@@ -14,14 +14,14 @@ Show::Show(lunk::Engine *game, lunk::TileEngine *tileEngine)
 }
 
 void Show::render(lunk::Renderer *renderer) {
-	for (auto &worldObj : acts) {
-		worldObj->render(renderer);
+	for (auto &act : acts) {
+		act->render(renderer);
 	}
 }
 
 void Show::update(double timeDelta) {
-	for (auto &worldObj : acts) {
-		worldObj->update(timeDelta);
+	for (auto &act : acts) {
+		act->update(timeDelta);
 	}
 }
 
