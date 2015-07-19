@@ -7,12 +7,14 @@
 #include "Log.h"
 #include "Vec2.h"
 
+using namespace std;
+
 namespace lunk {
 
 	struct SDLInput::Implementation {
-		std::set<Key> pressedKeys;
-		std::set<Key> recentlyPressedKeys;
-		std::set<Key> recentlyReleasedKeys;
+		set<Key> pressedKeys;
+		set<Key> recentlyPressedKeys;
+		set<Key> recentlyReleasedKeys;
 
 		uint8_t pressedMouseButtons = 0;
 		uint8_t recentlyPressedMouseButtons = 0;
