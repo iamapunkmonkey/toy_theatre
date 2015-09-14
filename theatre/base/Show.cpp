@@ -19,9 +19,10 @@ void Show::render(lunk::Renderer *renderer) {
 	}
 }
 
-void Show::update(double timeDelta) {
+void Show::update(double timeDelta, int frame) {
+	_log.INFO() << timeDelta << endl;
 	for (auto &act : acts) {
-		act->update(timeDelta);
+		act->update(timeDelta, frame);
 	}
 }
 

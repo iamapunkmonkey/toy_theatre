@@ -2,6 +2,7 @@
 
 #include <SDL_ttf.h>
 #include <sdl/SDLRenderer.h>
+#include <thread>
 
 #include "Log.h"
 #include "sdl/SDLInput.h"
@@ -13,6 +14,7 @@ static lunk::Log _log;
 
 namespace lunk {
 	Engine::Engine(const Params &params) : initParams(params) {
+//		frameTimer = LunkTimer();
 	}
 
 	Engine::~Engine() {
@@ -124,7 +126,7 @@ namespace lunk {
 		input->update();
 
 		for (auto &updateable : registeredUpdateables) {
-			updateable->update(lastFrameTimeDelta);
+			updateable->update(lastFrameTimeDelta, frameCount);
 		}
 
 		// Draw
@@ -139,6 +141,8 @@ namespace lunk {
 		if (input->windowClosedRequest()) {
 			running = false;
 		}
+
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
 	}
 
 	void Engine::stopSDL() {

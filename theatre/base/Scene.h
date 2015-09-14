@@ -13,7 +13,7 @@ class Scene {
 public:
 	Scene(Act *act) : act(act) { }
 
-	void update(double timeDelta);
+	void update(double timeDelta, int frame);
 
 	void render(lunk::Renderer *renderer);
 

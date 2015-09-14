@@ -1,8 +1,8 @@
 #include "Scene.h"
 
-void Scene::update(double delta) {
+void Scene::update(double delta, int frame) {
 	for (auto &worldObject : worldObjects) {
-		worldObject->update(delta);
+		worldObject->update(delta, frame);
 	}
 }
 
@@ -10,7 +10,6 @@ void Scene::render(Renderer *renderer) {
 	for (auto &worldObject : worldObjects) {
 		worldObject->render(renderer);
 	}
-	act
 }
 
 void Scene::registerObject(WorldObject *obj)  {

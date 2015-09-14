@@ -5,9 +5,10 @@ set(THEATRE_SOURCES
     base/Act.cpp
     base/Scene.cpp
     shows/todd/Todd.cpp
-    base/actions/Action.cpp
-    base/actions/MovementAction.cpp
-    base/ActionManager.cpp)
+#    base/actions/Action.cpp
+#    base/actions/MovementAction.cpp
+#    base/ActionManager.cpp)
+)
 
 set(THEATRE_HEADERS
     base/Show.h
@@ -17,9 +18,10 @@ set(THEATRE_HEADERS
         base/Act.h
         base/Scene.h
     shows/todd/Todd.h
-    base/actions/Action.h
-    base/actions/MovementAction.h
-    base/ActionManager.h)
+#    base/actions/Action.h
+#    base/actions/MovementAction.h
+#    base/ActionManager.h)
+)
 
 source_group(Engine FILES ${THEATRE_SOURCES} ${THEATRE_HEADERS})
 

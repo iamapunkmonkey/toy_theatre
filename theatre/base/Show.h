@@ -15,11 +15,13 @@
 #include "List.h"
 #include "Act.h"
 
+class Act;
+
 class Show : public lunk::Updateable, public lunk::Renderable {
 public:
 	Show(lunk::Engine *game, lunk::TileEngine *tileEngine);
 
-	void update(double timeDelta) override;
+	void update(double timeDelta, int frame) override;
 
 	void render(lunk::Renderer *renderer) override;
 

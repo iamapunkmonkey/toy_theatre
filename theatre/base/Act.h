@@ -12,7 +12,7 @@ public:
 
 	}
 
-	void update(double timeDelta);
+	void update(double timeDelta, int frame);
 
 	void render(lunk::Renderer *renderer);
 
