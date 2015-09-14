@@ -30,3 +30,9 @@
 .idea
 bin
 engine/CMakeFiles
+
+CMakeFiles
+MakeFile
+*.cmake
+
+CMakeCache.txt
